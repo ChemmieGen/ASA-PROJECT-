@@ -1,0 +1,217 @@
+/* --- RESET & LAYOUT --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  overflow: hidden; /* Prevents unnecessary scrolling to match login style */
+  height: 100vh;
+}
+
+/* --- HEADER --- */
+header {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.main-logo { 
+  width: 180px; 
+  height: auto; 
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover { 
+  color: #1B5E20; 
+}
+
+/* --- REGISTRATION SECTION --- */
+.registration-section {
+  height: calc(100vh - 115px); /* Offsets for Header and Bottom Bar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.registration-container {
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+}
+
+/* THE GREEN OUTER FRAME */
+.green-frame {
+  background-color: #1B5E20; /* Forest Green */
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  min-height: 550px;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* THE WHITE FORM CARD */
+.form-card {
+  background: #fff;
+  border-radius: 40px;
+  padding: 60px 40px 40px 40px;
+  width: 50%;
+  position: relative;
+  border: 2px solid #333;
+  box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+}
+
+/* "REGISTRATION FORM" TOP BADGE */
+.form-header-badge {
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  background: #fff;
+  border: 2px solid #333;
+  padding: 10px 30px;
+  border-radius: 25px;
+}
+
+.form-header-badge h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1B5E20;
+}
+
+/* FORM FIELDS */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  background: #E0E0E0; /* Grey oval style from your layout */
+  border: none;
+  border-bottom: 2px solid #999;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.form-group input:focus {
+  background: #d5d5d5;
+}
+
+.readonly-input {
+  color: #555;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* RIGHT SIDE (PROMO CONTENT) */
+.promo-content {
+  width: 50%;
+  padding-left: 60px;
+  color: #fff;
+}
+
+.promo-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.promo-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+/* THE YELLOW REGISTER BUTTON */
+.register-btn {
+  background-color: #F9DC07; /* CSU Yellow */
+  color: #000;
+  border: none;
+  padding: 15px 60px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+}
+
+.register-btn:hover {
+  background-color: #e5cb06;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0px rgba(0,0,0,0.1);
+}
+
+.register-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+}
+
+/* --- BOTTOM DECORATIVE BAR --- */
+.bottom-bar {
+  height: 30px;
+  background-color: #1B5E20;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* RESPONSIVE TWEAK */
+@media (max-width: 992px) {
+  .green-frame {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .form-card, .promo-content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .promo-content {
+    text-align: center;
+    margin-top: 30px;
+  }
+}

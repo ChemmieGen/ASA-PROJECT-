@@ -1,0 +1,192 @@
+/* --- RESET & LAYOUT --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+}
+
+/* --- HEADER --- */
+header {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.main-logo {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #1B5E20;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  height: calc(100vh - 115px);
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1B5E20;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* --- SELECTION CARD --- */
+.login-frame {
+  background-color: #1B5E20;
+  padding: 30px;
+  border-radius: 30px 30px 0 0;
+  width: 450px;
+  position: relative;
+  top: 30px; 
+}
+
+.login-card-replica {
+  background: #fff;
+  padding: 40px 40px;
+  border-radius: 20px;
+  text-align: center;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-weight: 800;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* --- ROLE BUTTONS & LINKS --- */
+.role-selection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap slightly for 3 buttons */
+}
+
+.role-link-wrapper {
+  text-decoration: none;
+  display: block;
+}
+
+.role-option-btn {
+  width: 100%;
+  background: #fff;
+  border: 2px solid #333;
+  padding: 18px; /* Reduced padding slightly */
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+.role-option-btn span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #333;
+}
+
+.role-icon {
+  font-size: 22px;
+  color: #1B5E20;
+}
+
+/* --- HOVER STATES --- */
+.role-option-btn:hover {
+  background: #F9DC07;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 0px rgba(0,0,0,0.1);
+  border-color: #000;
+}
+
+.role-option-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+}
+
+.role-option-btn:hover .role-icon,
+.role-option-btn:hover span {
+  color: #000;
+}
+
+/* --- CARD FOOTER --- */
+.replica-footer {
+  font-size: 12px;
+  margin-top: 30px;
+  color: #333;
+}
+
+.sign-in-link {
+  font-weight: 800;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sign-in-link:hover {
+  color: #1B5E20;
+  text-decoration: underline;
+}
+
+/* --- BOTTOM BAR --- */
+.bottom-bar {
+  height: 30px;
+  background-color: #ffffff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

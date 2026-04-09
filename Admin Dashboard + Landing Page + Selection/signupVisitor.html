@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitor Registration - ASA Lost and Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="signupVisitor.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="Final logo.png" alt="ASA Logo" class="main-logo">
+  </div>
+  <div class="header-right">
+    <a href="selection.html" class="nav-link">Back to Selection</a>
+  </div>
+</header>
+
+<main class="registration-section">
+  <div class="registration-container">
+    
+    <div class="green-frame">
+      
+      <div class="form-card">
+        <div class="form-header-badge">
+          <h2>REGISTRATION FORM</h2>
+        </div>
+
+        <form action="#" class="signup-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="First Name" pattern="[A-Za-z\s]{2,}" title="Please enter your full legal first name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Last Name" pattern="[A-Za-z\s]{2,}" title="Please enter your full legal last name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Personal Email Address</label>
+            <input type="email" 
+                   placeholder="example@email.com" 
+                   title="Please use a valid personal email address" 
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="" required>
+          </div>
+
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="" required>
+          </div>
+
+          <div class="form-group">
+            <label>Role</label>
+            <input type="text" value="Visitor" readonly class="readonly-input">
+          </div>
+        </form>
+      </div>
+
+      <div class="promo-content">
+        <h1 class="promo-title">SIGN-UP NOW</h1>
+        <p class="promo-text">
+          Welcome to the ASA community. As a visitor, you can help return items found on campus or report belongings you may have lost during your visit. Join us in keeping our campus organized and helpful!
+        </p>
+        <button type="submit" class="register-btn">Register</button>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="bottom-bar"></footer>
+
+</body>
+</html>
