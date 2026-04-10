@@ -1,4 +1,6 @@
-/* --- RESET & LAYOUT --- */
+/* ============================================================
+   RESET & BASE
+============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +10,14 @@
 html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
   font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
+  background-color: #f5f6fa;
 }
 
-/* --- HEADER --- */
+/* ============================================================
+   HEADER  — matches main app <nav> card feel
+============================================================ */
 header {
   height: 85px;
   display: flex;
@@ -21,28 +25,39 @@ header {
   align-items: center;
   padding: 0 40px;
   background: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 10;
 }
 
 .main-logo {
-  width: 180px;
-  height: auto;
+  height: 120px;
+  width: auto;
   display: block;
+  object-fit: contain;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #374151;
   font-weight: 600;
   font-size: 14px;
-  transition: color 0.2s ease;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #e5e7eb;
+  transition: all 0.2s ease;
 }
 
 .nav-link:hover {
-  color: #1B5E20;
+  background: #1a5c2a;
+  color: #fff;
+  border-color: #1a5c2a;
 }
 
-/* --- HERO SECTION --- */
+/* ============================================================
+   HERO SECTION
+============================================================ */
 .hero-section {
   height: calc(100vh - 115px);
   display: flex;
@@ -55,61 +70,79 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
 }
 
+/* ---- Left text ---- */
 .hero-content {
   flex: 1;
-  max-width: 600px;
+  max-width: 560px;
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 800;
-  color: #1B5E20;
+  color: #1a5c2a;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+}
+
+.hero-title span {
+  color: #111827;
 }
 
 .hero-subtitle {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.75;
 }
 
-/* --- SELECTION CARD --- */
+/* ============================================================
+   CARD  — mirrors .form-card from the main app
+============================================================ */
 .login-frame {
-  background-color: #1B5E20;
-  padding: 30px;
-  border-radius: 30px 30px 0 0;
-  width: 450px;
-  position: relative;
-  top: 30px; 
+  width: 460px;
+  flex-shrink: 0;
 }
 
 .login-card-replica {
   background: #fff;
-  padding: 40px 40px;
   border-radius: 20px;
-  text-align: center;
-  min-height: 520px;
+  padding: 40px 36px 36px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: stretch;
+}
+
+/* Card top accent bar — mirrors the green header used in form pages */
+.login-card-replica::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: linear-gradient(90deg, #1a5c2a, #2d8a45);
+  border-radius: 6px 6px 0 0;
+  margin: -40px -36px 32px;
+  border-radius: 20px 20px 0 0;
 }
 
 .card-title {
-  font-weight: 800;
-  font-size: 26px;
-  margin-bottom: 30px;
-  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 22px;
 }
 
-/* --- ROLE BUTTONS & LINKS --- */
+/* ============================================================
+   ROLE BUTTONS  — mirrors .btn-submit + form input style
+============================================================ */
 .role-selection-container {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Reduced gap slightly for 3 buttons */
+  gap: 12px;
 }
 
 .role-link-wrapper {
@@ -120,73 +153,133 @@ header {
 .role-option-btn {
   width: 100%;
   background: #fff;
-  border: 2px solid #333;
-  padding: 18px; /* Reduced padding slightly */
-  border-radius: 15px;
+  border: 1.5px solid #d1d5db;
+  padding: 16px 20px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  gap: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   outline: none;
+  text-align: left;
 }
 
 .role-option-btn span {
   font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  color: #333;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+  letter-spacing: 0.05em;
 }
 
 .role-icon {
-  font-size: 22px;
-  color: #1B5E20;
+  font-size: 20px;
+  color: #1a5c2a;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
-/* --- HOVER STATES --- */
+/* Hover — mirrors .btn-submit green style */
 .role-option-btn:hover {
-  background: #F9DC07;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 0px rgba(0,0,0,0.1);
-  border-color: #000;
+  background: #1a5c2a;
+  border-color: #1a5c2a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26,92,42,0.22);
+}
+
+.role-option-btn:hover span {
+  color: #fff;
+}
+
+.role-option-btn:hover .role-icon {
+  color: #f5c518;
 }
 
 .role-option-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(26,92,42,0.15);
 }
 
-.role-option-btn:hover .role-icon,
-.role-option-btn:hover span {
-  color: #000;
-}
-
-/* --- CARD FOOTER --- */
+/* ============================================================
+   CARD FOOTER
+============================================================ */
 .replica-footer {
-  font-size: 12px;
-  margin-top: 30px;
-  color: #333;
+  font-size: 12.5px;
+  margin-top: 28px;
+  color: #6b7280;
+  text-align: center;
 }
 
 .sign-in-link {
-  font-weight: 800;
-  color: #333;
+  font-weight: 700;
+  color: #1a5c2a;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .sign-in-link:hover {
-  color: #1B5E20;
+  color: #111827;
   text-decoration: underline;
 }
 
-/* --- BOTTOM BAR --- */
+/* ============================================================
+   BOTTOM BAR
+============================================================ */
 .bottom-bar {
   height: 30px;
-  background-color: #ffffff;
+  background-color: #fff;
+  border-top: 1px solid #e5e7eb;
   width: 100%;
   position: fixed;
   bottom: 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 0 32px;
+    overflow-y: auto;
+    align-items: flex-start;
+    padding-top: 40px;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .login-frame {
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .login-card-replica {
+    padding: 32px 24px 28px;
+  }
 }
